@@ -20,11 +20,25 @@ Starting ksqlDB Server
 ksqlDB Server is [UP]
 Starting Control Center
 Control Center is [UP]
+```
 
-@Prateeks-MacBook-Pro ~ % kafka-topics --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
-Created topic test.
-
-@Prateeks-MacBook-Pro ~ % kafka-console-producer --topic test --broker-list localhost:9092 < /Users/prats/Downloads/Apache-Kafka-For-Absolute-Beginners-master/00-data/data/sample1.csv 
-@Prateeks-MacBook-Pro ~ % 
+# Create Topic
 
 ```
+@Prateeks-MacBook-Pro ~ % kafka-topics --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+Created topic test.
+```
+
+# Load Data Through CSV file
+
+```
+@Prateeks-MacBook-Pro ~ % kafka-console-producer --topic test --broker-list localhost:9092 < /Users/prats/Downloads/Apache-Kafka-For-Absolute-Beginners-master/00-data/data/sample1.csv 
+@Prateeks-MacBook-Pro ~ % 
+```
+
+# To see all messages
+
+```sh
+kafka-console-consumer --topic test --bootstrap-server localhost:9092 --from-beginning
+```
+
