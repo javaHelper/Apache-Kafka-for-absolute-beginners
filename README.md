@@ -1,5 +1,30 @@
 # Apache-Kafka-for-absolute-beginners
 
+# For windows
+
+```sh
+E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
+Classpath is empty. Please build the project first e.g. by running 'gradlew jarAll'
+```
+
+If you get the above error, add above `rem Classpath addition for core` in E:\confluent-7.2.2\bin\windows
+
+```sh
+rem classpath addition for LSB style path
+if exist %BASE_DIR%\share\java\kafka\* (
+	call:concat %BASE_DIR%\share\java\kafka\*
+)
+```
+
+- Start Kafka
+
+```sh
+E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
+```
+
+
+# For MAC
+
 ```sh
 @Prateeks-MacBook-Pro ~ % confluent local services start
 The local commands are intended for a single-node development environment only,
