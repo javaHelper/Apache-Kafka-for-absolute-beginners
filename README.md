@@ -85,6 +85,11 @@ baseOffset: 658 lastOffset: 820 count: 163 baseSequence: 658 lastSequence: 820 p
 E:\confluent-7.2.2>
 ```
 
+```
+E:\confluent-7.2.2>setx KAFKA_HOME E:\confluent-7.2.2
+SUCCESS: Specified value was saved.
+```
+
 ----------------------------------
 # For MAC
 
