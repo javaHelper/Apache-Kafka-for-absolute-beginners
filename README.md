@@ -16,10 +16,12 @@ if exist %BASE_DIR%\share\java\kafka\* (
 )
 ```
 
-- Start Kafka
+- Start Zookeeper and Kafka
 
 ```sh
 E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
+
+E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server.properties
 ```
 
 
