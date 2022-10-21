@@ -1,6 +1,6 @@
 # Apache-Kafka-for-absolute-beginners
 
-# For windows
+# For windows - Install Single Node Cluster
 
 ```sh
 E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
@@ -24,7 +24,24 @@ E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.pr
 E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server.properties
 ```
 
+- Load and read data
 
+```
+E:\confluent-7.2.2>bin\windows\kafka-topics.bat --create --topic test --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+Created topic test.
+
+E:\confluent-7.2.2>bin\windows\kafka-console-producer.bat --topic test --broker-list localhost:9092 < E:\confluent-7.2.2\data\sample1.csv
+
+E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --topic test --bootstrap-server localhost:9092 --from-beginning
+```
+------------------
+
+# Install Multi Node Cluster
+
+```sh
+```
+
+----------------------------------
 # For MAC
 
 ```sh
