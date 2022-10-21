@@ -38,7 +38,14 @@ E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --topic test --bootstr
 
 # Install Multi Node Cluster
 
-rename server.properties to `server-0.properties`, also copy and create `server-1.properties` nd `erver-2.properties`.
+rename server.properties to `server-0.properties`, also copy and create `server-1.properties` nd `erver-2.properties`. Change below 3 parameters
+
+```
+broker.id=0
+listeners=PLAINTEXT://:9092
+log.dirs=/tmp/kafka-logs-0
+```
+
 
 ```sh
 E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
