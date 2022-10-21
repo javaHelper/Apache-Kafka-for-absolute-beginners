@@ -55,8 +55,21 @@ E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-0.propert
 E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-1.properties
 
 E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-2.properties
-
 ```
+
+```sh
+E:\confluent-7.2.2>bin\windows\kafka-topics.bat --create --topic stock-ticks --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+Created topic stock-ticks.
+
+E:\confluent-7.2.2>bin\windows\kafka-console-producer.bat --topic stock-tics --broker-list localhost:9092 < E:\confluent-7.2.2\data\sample1.csv
+
+E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stock-ticks --from-beginning --group group1
+
+E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic stock-ticks --from-beginning --group group1
+```
+
+![image](https://user-images.githubusercontent.com/54174687/197177834-4fa3999d-6bb2-4e88-948f-37e78c2645e0.png)
+
 
 ----------------------------------
 # For MAC
