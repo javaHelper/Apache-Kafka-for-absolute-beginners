@@ -38,7 +38,17 @@ E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --topic test --bootstr
 
 # Install Multi Node Cluster
 
+rename server.properties to `server-0.properties`, also copy and create `server-1.properties` nd `erver-2.properties`.
+
 ```sh
+E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
+
+E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-0.operties
+
+E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-1.properties
+
+E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-2.properties
+
 ```
 
 ----------------------------------
