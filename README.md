@@ -70,6 +70,20 @@ E:\confluent-7.2.2>bin\windows\kafka-console-consumer.bat --bootstrap-server loc
 
 ![image](https://user-images.githubusercontent.com/54174687/197177834-4fa3999d-6bb2-4e88-948f-37e78c2645e0.png)
 
+Like this we can see all partition data
+
+```
+E:\confluent-7.2.2>bin\windows\kafka-dump-log.bat --files E:\tmp\kafka-logs-0\stock-ticks-1\00000000000000000000.log
+Dumping E:\tmp\kafka-logs-0\stock-ticks-1\00000000000000000000.log
+Starting offset: 0
+baseOffset: 0 lastOffset: 162 count: 163 baseSequence: 0 lastSequence: 162 producerId: 1001 producerEpoch: 0 partitionLeaderEpoch: 0 isTransactional: false isControl: false deleteHorizonMs: OptionalLong.empty position: 0 CreateTime: 1666348931639 size: 16339 magic: 2 compresscodec: none crc: 1974167200 isvalid: true
+baseOffset: 163 lastOffset: 325 count: 163 baseSequence: 163 lastSequence: 325 producerId: 1001 producerEpoch: 0 partitionLeaderEpoch: 0 isTransactional: false isControl: false deleteHorizonMs: OptionalLong.empty position: 16339 CreateTime: 1666348931654 size: 16325 magic: 2 compresscodec: none crc: 3506398774 isvalid: true
+baseOffset: 326 lastOffset: 489 count: 164 baseSequence: 326 lastSequence: 489 producerId: 1001 producerEpoch: 0 partitionLeaderEpoch: 0 isTransactional: false isControl: false deleteHorizonMs: OptionalLong.empty position: 32664 CreateTime: 1666348931686 size: 16303 magic: 2 compresscodec: none crc: 3361958651 isvalid: true
+baseOffset: 490 lastOffset: 657 count: 168 baseSequence: 490 lastSequence: 657 producerId: 1001 producerEpoch: 0 partitionLeaderEpoch: 0 isTransactional: false isControl: false deleteHorizonMs: OptionalLong.empty position: 48967 CreateTime: 1666348931723 size: 16360 magic: 2 compresscodec: none crc: 3342591433 isvalid: true
+baseOffset: 658 lastOffset: 820 count: 163 baseSequence: 658 lastSequence: 820 producerId: 1001 producerEpoch: 0 partitionLeaderEpoch: 0 isTransactional: false isControl: false deleteHorizonMs: OptionalLong.empty position: 65327 CreateTime: 1666348931726 size: 16381 magic: 2 compresscodec: none crc: 1583871579 isvalid: true
+
+E:\confluent-7.2.2>
+```
 
 ----------------------------------
 # For MAC
