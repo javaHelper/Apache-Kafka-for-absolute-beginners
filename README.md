@@ -43,7 +43,7 @@ rename server.properties to `server-0.properties`, also copy and create `server-
 ```sh
 E:\confluent-7.2.2>bin\windows\zookeeper-server-start.bat etc\kafka\zookeeper.properties
 
-E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-0.operties
+E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-0.properties
 
 E:\confluent-7.2.2>bin\windows\kafka-server-start.bat etc\kafka\server-1.properties
 
