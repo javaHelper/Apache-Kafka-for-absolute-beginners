@@ -1,1 +1,1 @@
-%KAFKA_HOME%\bin\windows\kafka-topics.bat --describe  --zookeeper localhost:9092 --topic invoice
+%KAFKA_HOME%\bin\windows\kafka-topics.bat --describe  --bootstrap-server localhost:9092 --topic invoice
