@@ -15,7 +15,6 @@ public class StorageDemo {
     private static final Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) {
-
         logger.info("Creating Kafka Producer...");
         Properties props = new Properties();
         props.put(ProducerConfig.CLIENT_ID_CONFIG, AppConfigs.applicationID);
@@ -32,6 +31,5 @@ public class StorageDemo {
 
         logger.info("Finished - Closing Kafka Producer.");
         producer.close();
-
     }
 }
